@@ -1,0 +1,9 @@
+.board {
+    width: 100%;
+    table-layout:fixed;
+    overflow: hidden;
+}
+.board td {
+    height: 2rem;
+    border: 1px solid red;
+}
