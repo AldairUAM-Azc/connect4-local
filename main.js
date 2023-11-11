@@ -1,9 +1,8 @@
 import "./styles/style.css";
 import "./styles/board.css"
-import { gameState } from "./gameState";
 import { setupBoardEvents } from "./clickedToken";
 
-let title = `<h1>CONNECT 4</h1>`;
+let titleHTML = `<h1>CONNECT 4</h1>`;
 let boardHTML = `
 <div>
   <table class="board">
