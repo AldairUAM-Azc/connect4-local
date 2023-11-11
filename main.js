@@ -64,5 +64,5 @@ let boardHTML = `
 </div>
 `;
 
-document.querySelector("#app").innerHTML = title + boardHTML;
+document.querySelector("#app").innerHTML = titleHTML + boardHTML;
 setupBoardEvents(document.querySelector(".board"));
