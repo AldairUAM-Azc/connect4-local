@@ -10,5 +10,5 @@ export let gameState = {
   ],
   winner: 0,
   tokensPlayed: 0,
-  tokenSound: new Audio("tokenDropSound.mp3"),
+  tokenSound: new Audio("public/tokenDropSound.mp3"),
 };
