@@ -11,14 +11,25 @@ function handlePlay(ev) {
 }
 
 function playToken(clickedToken) {
+  gameState.tokensPlayed += 1;
   updateBoard(clickedToken);
   if (checkForWinner()) {
     gameState.winner = gameState.player;
     document.querySelector(".current-player").textContent = "";
-    document.querySelector(".winner").textContent = `Player ${gameState.winner} WINS!!`;
+    document.querySelector(".winner").textContent = `Player ${gameState.winner == 1 ? "1️⃣" : "2️⃣"} WINS!!`;
     document.querySelectorAll("td").forEach(el => el.removeEventListener("click", handlePlay))
   };
+  if(checkForDraw()){
+    gameState.winner = 0;
+    document.querySelector(".current-player").textContent = "";
+    document.querySelector(".winner").textContent = `ITS A DRAW!`;
+    document.querySelectorAll("td").forEach(el => el.removeEventListener("click", handlePlay))
+  }
   changeTurn();
+}
+
+function checkForDraw(){
+  return gameState.tokensPlayed > 41
 }
 
 function updateBoard(clickedToken) {
@@ -33,7 +44,7 @@ function updateBoardUI(row, column) {
   let tokenUI = document.querySelector(`td[data-row="${row}"][data-column="${column}"]`);
   let tokenColorClass = `p${player}-token`;
   tokenUI.classList.add(tokenColorClass);
-  document.querySelector(".current-player").textContent = `Go Player ${player === 1 ? 2 : 1}!`
+  document.querySelector(".current-player").textContent = `Go Player ${player === 1 ? "2️⃣" : "1️⃣"}!`
 }
 
 function getRowOfPlayingToken(column) {

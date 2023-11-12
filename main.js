@@ -68,7 +68,7 @@ let board = `
   </table>
 </div>
 `;
-let currentPlayerPrompt = `<h3 class="current-player">Go Player 1!</h3>`;
+let currentPlayerPrompt = `<h3 class="current-player">Go Player 1️⃣!</h3>`;
 let winnerPrompt = `<h2 class="winner"></h2>`;
 
 
