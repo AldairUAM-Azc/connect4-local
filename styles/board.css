@@ -1,9 +1,56 @@
+@import url(variables.css);
+/* Table of Content*/
+/*
+  1. board
+  2. instructions
+*/
+
+/* board */
 .board {
     width: 100%;
-    table-layout:fixed;
+    table-layout: fixed;
     overflow: hidden;
+    max-width: 260px;
 }
+
 .board td {
+    box-sizing: border-box;
     height: 2rem;
-    border: 1px solid red;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.board td.p1-token {
+    background-color: red;
+}
+
+.board td.p2-token {
+    background-color: yellow;
+}
+
+/* instructions */
+.instructions {
+    text-decoration: none;
+    list-style: none;
+}
+.instructions li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+}
+.instructions li::after {
+    content: "";
+    display:inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 1rem;
+}
+.instructions  li:nth-child(1)::after{
+    background-color: red;
+}
+.instructions  li:nth-child(2)::after{
+    background-color: yellow;
 }
