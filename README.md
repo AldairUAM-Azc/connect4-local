@@ -1,2 +1,4 @@
-# connect4-local
-local 2 player connect 4 prototype
+# CONNECT 4 
+## LOCAL 2 PLAYER GAME
+---
+Connect 4
