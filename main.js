@@ -9,7 +9,7 @@ let instructions = `
   <li>Player 2: </li>
 </ul>`
 let board = `
-<div>
+<div class="board-container">
   <table class="board">
     <tr>
       <td data-row="0" data-column="0"></td>

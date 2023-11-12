@@ -43,7 +43,9 @@ function updateBoardUI(row, column) {
   let player = gameState.player;
   let tokenUI = document.querySelector(`td[data-row="${row}"][data-column="${column}"]`);
   let tokenColorClass = `p${player}-token`;
+  tokenUI.classList.add("drop-token");
   tokenUI.classList.add(tokenColorClass);
+  setTimeout(() => gameState.tokenSound.play(), 380)
   document.querySelector(".current-player").textContent = `Go Player ${player === 1 ? "2️⃣" : "1️⃣"}!`
 }
 

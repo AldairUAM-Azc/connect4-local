@@ -9,4 +9,5 @@ export let gameState = {
         [0, 0, 0, 0, 0, 0, 0]],
     winner: 0,
     tokensPlayed: 0,
+    tokenSound: new Audio("tokenDropSound.mp3"),
 }
