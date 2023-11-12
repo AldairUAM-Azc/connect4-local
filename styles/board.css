@@ -11,6 +11,8 @@
     table-layout: fixed;
     overflow: hidden;
     max-width: 260px;
+    background-color: blue;
+    border-radius: 1rem;
 }
 
 .board td {
