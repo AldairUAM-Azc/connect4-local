@@ -12,6 +12,8 @@
     overflow: hidden;
     max-width: 260px;
     background-color: blue;
+    padding: 6px 3px;
+    filter: blur(20%);
     border-radius: 1rem;
 }
 
